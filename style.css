@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:titulo ;
+    src: url(titulo.ttf);
+}
+body{
+    background-color: rgb(9, 161, 161);
+}
+h1, h3, a{
+    font-family: titulo;
+    text-align: center;
+    /* font-size: 4em; */
+    
+}
+h1{
+  
+  font-size: 3em;
+}
+
+h3{
+    margin-top: -15px;
+    padding-bottom: 15px;
+    font-size: 2em;
+}
+.titulo{
+  background-color: #0307f4;
+}
+
+/* NABVAR */
+
+.wrapper {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+   background-color: wheat;
+  }
+  
+  nav {
+    display: flex;
+    width: 90%;
+  }
+  
+  ul li a {
+    margin-left: 1.5em;
+  }
+  
+  a.logo {
+    margin-right: auto;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    font-size: 1.25em;
+  }
+  
+  a::after {
+    content:"";
+    top: 80%;
+    border-bottom: 2px solid #0307f4;
+    transition: all 0.35s;
+    position: absolute;
+  }
+  
+  a:hover::after {
+    transition: all 0.35s;
+
+  }
+  
+  a::after {
+    right: 50%;
+    left: 50%;
+  }
+  
+  a:hover::after {
+    right: 0;
+    left: 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .wrapper {
+      height: auto;
+    }
+    
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    a.logo {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      margin-right: 0px;
+    }
+    
+    ul {
+      width: 100%;
+      margin-bottom: 1em;
+      justify-content: space-between;
+    }
+    
+    ul li a {
+      margin-left: 0px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    a.logo {
+      margin: 1.5em;
+    }
+    
+    ul {
+      flex-direction: column;
+    }
+    
+    ul li {
+      margin: 0.3em;
+      text-align: center;
+    }
+    
+    ul li a {
+      margin-left: 0px;
+    }
+  }
+  /* NABVAR */
+
+  /* SLIDER */
+
+  @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+    
+    
+    .slider { overflow: hidden; }
+    .slider figure img {
+    width: 20%; 
+   
+    float: left; 
+    }
+    .slider figure { 
+      position: relative;
+      width: 500%;
+      margin-top: 5px;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 20s slidy infinite; 
+    }
+    img{
+     
+      border: solid 15px black;
+      height: 500px;
+      margin-bottom: 5px;
+    }
+
+    
+    
+    @media screen and (max-width: 645px){
+      h1,h3{
+        font-size: 1.5em;
+      }
+    }
